@@ -57,7 +57,7 @@ To run this project locally, follow these steps:
 
 ### ## 📧 Contact
 
--   **LinkedIn:** [Your LinkedIn Profile URL]
+-   **LinkedIn:** [vaibhav-waghalkar](https://www.linkedin.com/in/vaibhav-waghalkar-848885343/)
 -   **GitHub:** [@Vaibhav-Waghalkar](https://github.com/Vaibhav-Waghalkar)
 -   **Email:** vaibhavwaghalkar2@gmail.com
 
