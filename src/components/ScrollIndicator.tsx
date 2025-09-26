@@ -2,10 +2,12 @@ import { ChevronDown } from 'lucide-react';
 
 export function ScrollIndicator() {
   const scrollToNext = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth'
-    });
+    const aboutEl = document.getElementById('about');
+    if (aboutEl) {
+      aboutEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
   };
 
   return (
