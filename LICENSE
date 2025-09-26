@@ -1,17 +1,22 @@
+MIT License
+
 Copyright (c) 2025 Vaibhav Waghalkar
 
-All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Permission is hereby granted to view this repository and its contents for personal, non-commercial evaluation and portfolio review purposes only.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Any other use is strictly prohibited without prior written permission from the copyright holder, including but not limited to:
-- Copying, reproducing, or redistributing the code or assets in any form
-- Modifying, adapting, or creating derivative works
-- Incorporating any part of the code or assets into other software or projects
-- Commercial use of any kind
-- Sublicensing or relicensing
-
-NO WARRANTY: This software and all accompanying materials are provided "as is" without any warranties, express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from, out of, or in connection with the software or the use or other dealings in the software.
-
-For licensing inquiries, contact: vaibhav.waghalkar (at) gmail (dot) com
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
