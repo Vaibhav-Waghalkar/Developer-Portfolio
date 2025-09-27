@@ -1,45 +1,68 @@
-# Vaibhav Waghalkar - Developer & AI Engineer Portfolio
+# Personal Portfolio - Vaibhav Waghalkar
 
-![Portfolio Screenshot](./public/screenshot.png) 
-This repository contains the source code for my personal portfolio website, showcasing my skills and projects in full-stack web development and AI engineering. The site is built with a modern tech stack and features a clean, responsive, split-screen design.
+<p align="center">
+  <img src="./public/screenshot.png" alt="Portfolio Screenshot" width="800"/>
+</p>
 
-**Live Site URL:** [Your-Live-Site-Link.com](https://Your-Live-Site-Link.com) ---
+<p align="center">
+    <a href="https://github.com/Vaibhav-Waghalkar/Developer-Portfolio/stargazers"><img src="https://img.shields.io/github/stars/Vaibhav-Waghalkar/Developer-Portfolio?style=for-the-badge&logo=github&color=0e75b6" alt="Stars Badge"/></a>
+    <a href="https://www.linkedin.com/in/vaibhav-waghalkar-848885343/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn Badge"/></a>
+</p>
 
-### ## ✨ Features
+This repository contains the source code for my personal portfolio website, designed to showcase my journey and expertise at the intersection of **Full-Stack Web Development** and **AI Engineering**.
 
-* **Dual Persona:** A unique split-screen hero section introducing my skills as both a Developer and an AI Engineer.
-* **Project Showcase:** A filterable gallery of my key projects with descriptions, tech stacks, and links to GitHub.
-* **Blog Section:** Articles and insights on topics related to AI, web development, and machine learning.
-* **Interactive Resume:** A detailed look at my skills, experience, and education with a CV download option.
-* **Contact Form:** A fully functional form for visitors to get in touch.
-* **Responsive Design:** Optimized for a seamless experience on all devices, from desktops to mobile phones.
-
----
-
-### ## 🚀 Tech Stack
-
-This project is built using the following technologies:
-
-* **Frontend:** [Vite](https://vitejs.dev/) + [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
-* **Animations:** [Tailwind CSS Animate](https://tailwindcss-animate.com/)
-* **Deployment:** Vercel / Netlify / GitHub Pages
+**Live Site URL:** [Coming Soon!](https://vaibhav-waghalkar.github.io/Developer-Portfolio/)
 
 ---
 
-### ## 🛠️ Getting Started
+## ## 🎯 About This Project
 
-To run this project locally, follow these steps:
+This portfolio is more than just a list of projects; it's a carefully crafted digital space that reflects my passion for building intelligent, scalable, and user-friendly applications. The primary goal is to present a clear narrative of my skills, from designing responsive frontends to architecting robust, AI-powered backends.
+
+---
+
+## ## ✨ Features
+
+* **Dual Persona Hero Section:** A unique split-screen design that immediately communicates my core strengths as both a versatile Web Developer and a forward-thinking AI Engineer.
+* **Dynamic Project Showcase:** An interactive gallery of my most significant projects. Each entry includes a detailed description, the tech stack used, and direct links to the live version and GitHub repository.
+* **Interactive Digital Resume:** A comprehensive but easy-to-navigate page detailing my professional experience, technical skills, and educational background, complete with a CV download option.
+* **Blog Section:** A dedicated space where I share articles and insights on topics I'm passionate about, including AI, web architecture, and machine learning.
+* **Fully Responsive Design:** Meticulously styled to ensure a seamless and visually pleasing experience on all devices, from large desktop monitors to mobile phones.
+
+---
+
+## ## 🚀 Tech Stack & Architectural Choices
+
+This project was built using a modern, efficient, and scalable technology stack. Each technology was chosen for its specific strengths in creating a high-quality web application.
+
+| Category      | Technology        | Justification                                                                 |
+| :------------ | :---------------- | :---------------------------------------------------------------------------- |
+| **Core** | **Vite + React** | For a lightning-fast development experience and a powerful component-based UI.  |
+| **Language** | **TypeScript** | To ensure code quality, scalability, and type safety throughout the project.  |
+| **Styling** | **Tailwind CSS** | For a utility-first approach that allows for rapid and consistent styling.    |
+| **UI Kit** | **shadcn/ui** | For a set of beautifully designed, accessible, and unstyled components.       |
+| **Deployment**| **Vercel/Netlify**| For seamless continuous integration, deployment, and hosting.                 |
+
+---
+
+## ## 🛠️ Getting Started
+
+To get a local copy up and running, please follow these steps.
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) (v18 or newer) installed on your machine.
+
+### Local Development
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/Vaibhav-Waghalkar/Portfolio_Split_Screen_Style.git
+    git clone [https://github.com/Vaibhav-Waghalkar/Developer-Portfolio.git](https://github.com/Vaibhav-Waghalkar/Developer-Portfolio.git)
     ```
 
-2.  **Navigate to the project directory:**
+2.  **Navigate into the project directory:**
     ```sh
-    cd Portfolio_Split_Screen_Style
+    cd Developer-Portfolio
     ```
 
 3.  **Install dependencies:**
@@ -51,18 +74,13 @@ To run this project locally, follow these steps:
     ```sh
     npm run dev
     ```
-    The site will be available at `http://localhost:8080` (or another port if 8080 is busy).
+    The site will be running on `http://localhost:5173/`.
 
 ---
 
-### ## 📧 Contact
+## ## 📧 Connect With Me
+
+I'm always eager to connect with other developers, tech enthusiasts, and potential collaborators. Feel free to reach out!
 
 -   **LinkedIn:** [vaibhav-waghalkar](https://www.linkedin.com/in/vaibhav-waghalkar-848885343/)
--   **GitHub:** [@Vaibhav-Waghalkar](https://github.com/Vaibhav-Waghalkar)
 -   **Email:** vaibhavwaghalkar2@gmail.com
-
----
-
-### ## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
