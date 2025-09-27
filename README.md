@@ -1,40 +1,48 @@
-# Vaibhav Waghalkar - Developer & AI Engineer Portfolio
+# Personal Portfolio - Vaibhav Waghalkar
 
-![Portfolio Screenshot](./public/screenshot.png) 
-This repository contains the source code for my personal portfolio website, showcasing my skills and projects in full-stack web development and AI engineering. The site is built with a modern tech stack and features a clean, responsive, split-screen design.
+![Vaibhav Waghalkar - AI & Web Developer](./public/screenshot.png)
 
-**Live Site URL:** [Your-Live-Site-Link.com](https://Your-Live-Site-Link.com) ---
+### Live Site: [Coming Soon!](https://vaibhavwaghalkar.github.io)
 
-### ## ✨ Features
-
-* **Dual Persona:** A unique split-screen hero section introducing my skills as both a Developer and an AI Engineer.
-* **Project Showcase:** A filterable gallery of my key projects with descriptions, tech stacks, and links to GitHub.
-* **Blog Section:** Articles and insights on topics related to AI, web development, and machine learning.
-* **Interactive Resume:** A detailed look at my skills, experience, and education with a CV download option.
-* **Contact Form:** A fully functional form for visitors to get in touch.
-* **Responsive Design:** Optimized for a seamless experience on all devices, from desktops to mobile phones.
+This repository contains the source code for my personal portfolio, a modern and responsive website designed to showcase my skills and projects at the intersection of **Full-Stack Web Development** and **AI Engineering**.
 
 ---
 
-### ## 🚀 Tech Stack
+## ✨ Key Features
 
-This project is built using the following technologies:
-
-* **Frontend:** [Vite](https://vitejs.dev/) + [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
-* **Animations:** [Tailwind CSS Animate](https://tailwindcss-animate.com/)
-* **Deployment:** Vercel / Netlify / GitHub Pages
+* **Dual Persona Hero:** A unique split-screen hero section that immediately introduces my skills as both a Web Developer and an AI Engineer.
+* **Dynamic Project Showcase:** A clean, filterable gallery of my key projects, complete with live links, GitHub repositories, and detailed tech stacks.
+* **Interactive Resume:** A comprehensive look at my professional experience, skills, and education, with a one-click CV download.
+* **Blog Section:** A dedicated space for articles and insights on AI, web development, and machine learning.
+* **Fully Responsive:** Optimized for a seamless and visually engaging experience on all devices, from desktops to mobile phones.
 
 ---
 
-### ## 🛠️ Getting Started
+## 🚀 Tech Stack & Tools
 
-To run this project locally, follow these steps:
+This portfolio is built with a modern, performant, and scalable tech stack.
+
+| Category      | Technology                                                                                                                              |
+| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core** | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) |
+| **Styling** | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)                    |
+| **Deployment**| ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)                                |
+
+---
+
+## 🛠️ Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) (version 18 or higher) and `npm` installed on your machine.
+
+### Installation & Setup
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/Vaibhav-Waghalkar/Portfolio_Split_Screen_Style.git
+    git clone [https://github.com/Vaibhav-Waghalkar/Portfolio_Split_Screen_Style.git](https://github.com/Vaibhav-Waghalkar/Portfolio_Split_Screen_Style.git)
     ```
 
 2.  **Navigate to the project directory:**
@@ -42,7 +50,7 @@ To run this project locally, follow these steps:
     cd Portfolio_Split_Screen_Style
     ```
 
-3.  **Install dependencies:**
+3.  **Install NPM packages:**
     ```sh
     npm install
     ```
@@ -51,18 +59,20 @@ To run this project locally, follow these steps:
     ```sh
     npm run dev
     ```
-    The site will be available at `http://localhost:8080` (or another port if 8080 is busy).
+    Your local site will be available at `http://localhost:5173/` (Vite's default port).
 
 ---
 
-### ## 📧 Contact
+## 📧 Connect with Me
 
--   **LinkedIn:** [vaibhav-waghalkar](https://www.linkedin.com/in/vaibhav-waghalkar-848885343/)
--   **GitHub:** [@Vaibhav-Waghalkar](https://github.com/Vaibhav-Waghalkar)
--   **Email:** vaibhavwaghalkar2@gmail.com
+I'm always open to connecting with new people. Feel free to reach out!
+
+<a href="https://www.linkedin.com/in/vaibhav-waghalkar-848885343/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:vaibhavwaghalkar2@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://github.com/Vaibhav-Waghalkar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 ---
 
-### ## 📄 License
+## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
