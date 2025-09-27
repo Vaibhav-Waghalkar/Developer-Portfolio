@@ -15,13 +15,13 @@ This repository contains the source code for my personal portfolio website, desi
 
 ---
 
-## ## 🎯 About This Project
+## 🎯 About This Project
 
 This portfolio is more than just a list of projects; it's a carefully crafted digital space that reflects my passion for building intelligent, scalable, and user-friendly applications. The primary goal is to present a clear narrative of my skills, from designing responsive frontends to architecting robust, AI-powered backends.
 
 ---
 
-## ## ✨ Features
+## ✨ Key Features
 
 * **Dual Persona Hero Section:** A unique split-screen design that immediately communicates my core strengths as both a versatile Web Developer and a forward-thinking AI Engineer.
 * **Dynamic Project Showcase:** An interactive gallery of my most significant projects. Each entry includes a detailed description, the tech stack used, and direct links to the live version and GitHub repository.
@@ -31,33 +31,31 @@ This portfolio is more than just a list of projects; it's a carefully crafted di
 
 ---
 
-## ## 🚀 Tech Stack & Architectural Choices
+## 🚀 Tech Stack & Tools
 
-This project was built using a modern, efficient, and scalable technology stack. Each technology was chosen for its specific strengths in creating a high-quality web application.
+This portfolio is built with a modern, performant, and scalable tech stack.
 
-| Category      | Technology        | Justification                                                                 |
-| :------------ | :---------------- | :---------------------------------------------------------------------------- |
-| **Core** | **Vite + React** | For a lightning-fast development experience and a powerful component-based UI.  |
-| **Language** | **TypeScript** | To ensure code quality, scalability, and type safety throughout the project.  |
-| **Styling** | **Tailwind CSS** | For a utility-first approach that allows for rapid and consistent styling.    |
-| **UI Kit** | **shadcn/ui** | For a set of beautifully designed, accessible, and unstyled components.       |
-| **Deployment**| **Vercel/Netlify**| For seamless continuous integration, deployment, and hosting.                 |
+| Category      | Technology                                                                                                                              |
+| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core** | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) |
+| **Styling** | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)                    |
+| **Deployment**| ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)                                |
 
 ---
 
-## ## 🛠️ Getting Started
+## 🛠️ Getting Started
 
-To get a local copy up and running, please follow these steps.
+To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-Ensure you have [Node.js](https://nodejs.org/) (v18 or newer) installed on your machine.
+Make sure you have [Node.js](https://nodejs.org/) (version 18 or higher) and `npm` installed on your machine.
 
-### Local Development
+### Installation & Setup
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/Vaibhav-Waghalkar/Developer-Portfolio.git](https://github.com/Vaibhav-Waghalkar/Developer-Portfolio.git)
+    git clone https://github.com/Vaibhav-Waghalkar/Developer-Portfolio.git
     ```
 
 2.  **Navigate into the project directory:**
@@ -65,7 +63,7 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or newer) installed on your 
     cd Developer-Portfolio
     ```
 
-3.  **Install dependencies:**
+3.  **Install NPM packages:**
     ```sh
     npm install
     ```
@@ -74,13 +72,20 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or newer) installed on your 
     ```sh
     npm run dev
     ```
-    The site will be running on `http://localhost:5173/`.
+    Your local site will be available at `http://localhost:5173/` (Vite's default port).
 
 ---
 
-## ## 📧 Connect With Me
+## 📧 Connect with Me
 
-I'm always eager to connect with other developers, tech enthusiasts, and potential collaborators. Feel free to reach out!
+I'm always open to connecting with new people. Feel free to reach out!
 
--   **LinkedIn:** [vaibhav-waghalkar](https://www.linkedin.com/in/vaibhav-waghalkar-848885343/)
--   **Email:** vaibhavwaghalkar2@gmail.com
+<a href="https://www.linkedin.com/in/vaibhav-waghalkar-848885343/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:vaibhavwaghalkar2@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://github.com/Vaibhav-Waghalkar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
