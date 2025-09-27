@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, MessageSquare, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, MessageSquare, Github, Linkedin, Send, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,6 +51,12 @@ const Contact = () => {
       icon: Linkedin,
       url: 'https://www.linkedin.com/in/vaibhav-waghalkar-848885343',
       description: 'Connect with me professionally'
+    },
+    {
+      name: 'Instagram',
+      icon: Instagram,
+      url: 'https://www.instagram.com/waghalkar.vaibhav/',
+      description: 'Follow me for updates and behind-the-scenes'
     },
     {
       name: 'Email',

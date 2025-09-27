@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ThemeToggle } from '@/components/ThemeToggle';
 import { cn } from '@/lib/utils';
 
 export function Navigation() {
@@ -10,7 +9,7 @@ export function Navigation() {
   const location = useLocation();
 
   const navItems = [
-    { name: 'About', href: '/about' },
+    { name: 'About', href: '/#about' },
     { name: 'Projects', href: '/projects' },
     { name: 'Blog', href: '/blog' },
     { name: 'Resume', href: '/resume' },
@@ -44,10 +43,8 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Theme Toggle & Mobile Menu */}
+          {/* Mobile Menu */}
           <div className="flex items-center gap-2">
-            <ThemeToggle />
-            
             {/* Mobile Menu Button */}
             <Button
               variant="ghost"

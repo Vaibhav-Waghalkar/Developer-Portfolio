@@ -1,126 +1,200 @@
+import React from 'react';
 import { Navigation } from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Download, Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import { Download, Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Resume = () => {
-  const experience = [
-    {
-      year: '2024-Present',
-      company: 'Personal Projects',
-      role: 'AI Developer & Full-Stack Engineer',
-      description: 'Building ARIS AI Assistant and various full-stack applications with modern technologies',
-      skills: ['Python', 'FastAPI', 'React', 'AI/ML', 'LLMs']
+  const experiences = [
+    { 
+      title: "Trainee AI Full Stack Developer", 
+      company: "Real IT Solutions, Pune", 
+      duration: "Aug 2025 - Present", 
+      description: [
+        "Built and maintained full-stack applications using Angular, Spring Boot, React, Python, and FastAPI.", 
+        "Developed an AI-powered IDE with intelligent code assistance and a dynamic Website Builder platform."
+      ] 
     },
-    {
-      year: '2024',
-      company: 'Google Gen AI Hackathon',
-      role: 'AI Platform Developer',
-      description: 'Developed multi-bot AI platform with RAG and personality-aware bots',
-      skills: ['Python', 'AI/ML', 'RAG', 'Hackathon Winner']
+    { 
+      title: "Event Coordinator & Website Developer", 
+      company: "ByteFest 2K25", 
+      duration: "May 2025 - Aug 2025", 
+      description: [
+        "Led the design and development of the official college tech fest website.", 
+        "Coordinated key events, including a Hackathon, and managed all participant data and registrations."
+      ] 
     },
-    {
-      year: '2024',
-      company: 'ByteFest2K25',
-      role: 'Lead Developer',
-      description: 'Full-stack web platform for college tech fest with real-time features',
-      skills: ['React', 'Node.js', 'MongoDB', 'Real-time Systems']
+    { 
+      title: "Web Developer Intern", 
+      company: "Curosoft Technology", 
+      duration: "May 2025 - Jun 2025", 
+      description: [
+        "Developed fully responsive websites from scratch and authored key technical documents (SRS, Design Docs).", 
+        "Gained hands-on experience in client requirements analysis, UI/UX design, and code optimization."
+      ] 
     }
   ];
 
   const education = [
+    { 
+      institution: "M.B.E. Society's College of Engineering, Ambajogai", 
+      degree: "B.Tech, Computer Science & Engineering", 
+      duration: "2022 - 2026"
+    },
     {
-      year: '2023-2027',
-      institution: 'College/University',
-      degree: 'B.Tech in Computer Science Engineering',
-      description: 'Pursuing Bachelor of Technology with specialization in AI, ML, and scalable web systems'
+      institution: "MHT-CET",
+      degree: "MHT-CET Percentile",
+      duration: "2022",
+      grade: "87.40%"
     }
   ];
 
   const skills = {
-    'Languages': ['Python', 'C', 'C++', 'JavaScript'],
-    'Frontend': ['React', 'Next.js', 'TailwindCSS', 'HTML', 'CSS'],
-    'Backend': ['FastAPI', 'Node.js', 'Express.js'],
-    'AI/ML': ['LLMs', 'Deep Learning', 'Transformers', 'Neural Networks'],
-    'Databases': ['MongoDB', 'MySQL'],
-    'Tools': ['Docker', 'GitHub', 'Git', 'WebSockets']
+    "Languages": ["Python", "C++", "C", "JavaScript"], 
+    "Frontend": ["React", "Next.js", "HTML", "CSS", "TailwindCSS"], 
+    "Backend & APIs": ["FastAPI", "Node.js", "Express.js"], 
+    "Databases & Tools": ["MongoDB", "MySQL", "Docker", "GitHub"], 
+    "AI & ML": ["Artificial Intelligence", "LLMOPS", "Transformers"] 
   };
-
-  const certifications = [
-    'Google Gen AI International Hackathon Participant',
-    'Full Stack Web Development',
-    'AI and Machine Learning Fundamentals',
-    'Data Structures and Algorithms'
-  ];
 
   return (
     <div className="min-h-screen bg-background font-plus-jakarta">
       <Navigation />
       
       <main className="container mx-auto px-4 pt-24 pb-12">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-developer to-ai bg-clip-text text-transparent">
-              Resume
+        <div className="max-w-4xl mx-auto">
+          {/* Header with Download Button */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-developer to-ai bg-clip-text text-transparent">
+              Vaibhav Waghalkar
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               CSE Student | AI Developer | Full-Stack Web Developer | Builder of Ideas & Innovations
             </p>
-            <Button size="lg" className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <Button size="lg" className="mb-8">
               <Download className="h-5 w-5 mr-2" />
-              Download CV
+              <a href="/VaibhavWaghalkar_InternshalaResume.pdf" download>
+                Download Resume PDF
+              </a>
             </Button>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Left Column - Contact & Skills */}
-            <div className="space-y-6">
-              {/* Contact Info */}
-              <Card className="animate-fade-in-left">
-                <CardHeader>
-                  <CardTitle>Contact</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+          {/* Contact Information */}
+          <Card className="mb-8">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
                     <Mail className="h-4 w-4 text-muted-foreground" />
-                    <a href="mailto:vaibhavwaghalkar2@gmail.com" className="text-sm hover:text-primary transition-colors">
+                  <a href="mailto:vaibhavwaghalkar2@gmail.com" className="hover:text-primary transition-colors">
                       vaibhavwaghalkar2@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">India</span>
+                  <span>Ambajogai, Maharashtra, India</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Github className="h-4 w-4 text-muted-foreground" />
-                    <a href="https://github.com/Vaibhav-Waghalkar" className="text-sm hover:text-primary transition-colors">
-                      GitHub Profile
+                  <a href="https://github.com/Vaibhav-Waghalkar" className="hover:text-primary transition-colors">
+                    github.com/Vaibhav-Waghalkar
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Linkedin className="h-4 w-4 text-muted-foreground" />
-                    <a href="https://www.linkedin.com/in/vaibhav-waghalkar-848885343" className="text-sm hover:text-primary transition-colors">
+                  <a href="https://www.linkedin.com/in/vaibhav-waghalkar-848885343" className="hover:text-primary transition-colors">
                       LinkedIn Profile
                     </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Instagram className="h-4 w-4 text-muted-foreground" />
+                  <a href="https://www.instagram.com/waghalkar.vaibhav/" className="hover:text-primary transition-colors">
+                    @waghalkar.vaibhav
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Professional Summary */}
+          <Card className="mb-8">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-4">Professional Summary</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                A Computer Science Engineering student passionate about AI, ML, and scalable web systems. 
+                Currently building ARIS, an advanced AI-powered assistant with chat, voice, and automation capabilities. 
+                I love solving problems, building products, and optimizing systems with a dream to shape the future 
+                through AI-powered and full-stack innovations.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4 italic">
+                "Code with purpose. Learn with passion. Deliver with pride."
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Work Experience */}
+          <Card className="mb-8">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-6">Work Experience</h2>
+              <div className="space-y-6">
+                {experiences.map((exp, index) => (
+                  <div key={index} className="border-l-4 border-primary pl-6">
+                    <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
+                    <p className="text-lg text-primary font-semibold">{exp.company}</p>
+                    <p className="text-sm text-muted-foreground mb-3">{exp.duration}</p>
+                    <ul className="space-y-2">
+                      {exp.description.map((desc, descIndex) => (
+                        <li key={descIndex} className="flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-muted-foreground">{desc}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </CardContent>
-              </Card>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Education Section */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-cyan-400 border-b-2 border-gray-700 pb-2 mb-4">
+              Education
+            </h2>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-white">
+                B.Tech, Computer Science & Engineering
+              </h3>
+              <p className="text-gray-400">
+                M.B.E. Society's College of Engineering, Ambajogai
+              </p>
+              <p className="text-gray-500 italic">2022 - 2026</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Senior Secondary (XII), Science
+              </h3>
+              <p className="text-gray-400">
+                Yogeshwari Mahavidhyalay Ambajogai
+              </p>
+              <p className="font-semibold text-gray-300 mt-1">
+                MHT-CET Percentile: 87.40%
+              </p>
+            </div>
+          </div>
 
               {/* Skills */}
-              <Card className="animate-fade-in-left" style={{ animationDelay: '0.1s' }}>
-                <CardHeader>
-                  <CardTitle>Skills</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
+          <Card className="mb-8">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
+              <div className="space-y-6">
                     {Object.entries(skills).map(([category, skillList]) => (
                       <div key={category}>
-                        <h4 className="font-semibold text-sm mb-2">{category}</h4>
+                    <h3 className="text-lg font-semibold mb-3 text-primary">{category}</h3>
                         <div className="flex flex-wrap gap-2">
                           {skillList.map((skill) => (
-                            <Badge key={skill} variant="secondary" className="text-xs">
+                        <Badge key={skill} variant="secondary" className="text-sm">
                               {skill}
                             </Badge>
                           ))}
@@ -131,102 +205,71 @@ const Resume = () => {
                 </CardContent>
               </Card>
 
-              {/* Certifications */}
-              <Card className="animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
-                <CardHeader>
-                  <CardTitle>Certifications</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    {certifications.map((cert) => (
-                      <div key={cert} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-sm">{cert}</span>
-                      </div>
-                    ))}
+          {/* Key Projects */}
+          <Card className="mb-8">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-6">Key Projects</h2>
+              <div className="space-y-4">
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-lg font-bold text-foreground">ARIS (Advanced Responsive Intelligent System)</h3>
+                  <p className="text-muted-foreground">AI-powered assistant with ChatGPT-style interface, voice/text input, system automation, and support for multiple LLMs.</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <Badge variant="outline" className="text-xs">Python</Badge>
+                    <Badge variant="outline" className="text-xs">FastAPI</Badge>
+                    <Badge variant="outline" className="text-xs">Ollama</Badge>
+                    <Badge variant="outline" className="text-xs">AI/ML</Badge>
                   </div>
-                </CardContent>
-              </Card>
             </div>
-
-            {/* Right Column - Experience & Education */}
-            <div className="lg:col-span-2 space-y-6">
-              {/* Experience */}
-              <Card className="animate-fade-in-right">
-                <CardHeader>
-                  <CardTitle>Experience</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6">
-                    {experience.map((exp, index) => (
-                      <div key={index} className="flex gap-4">
-                        <div className="flex flex-col items-center">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          {index < experience.length - 1 && (
-                            <div className="w-px h-16 bg-border mt-2"></div>
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-sm text-primary font-semibold">{exp.year}</div>
-                          <div className="font-semibold text-lg">{exp.role}</div>
-                          <div className="text-muted-foreground font-medium">{exp.company}</div>
-                          <p className="text-sm text-muted-foreground mt-2">{exp.description}</p>
-                          <div className="flex flex-wrap gap-2 mt-3">
-                            {exp.skills.map((skill) => (
-                              <Badge key={skill} variant="outline" className="text-xs">
-                                {skill}
-                              </Badge>
-                            ))}
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-lg font-bold text-foreground">AI Creation Platform (Hackathon)</h3>
+                  <p className="text-muted-foreground">Multi-bot AI platform with RAG and personality-aware bots, built for Google Gen AI Hackathon.</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <Badge variant="outline" className="text-xs">Python</Badge>
+                    <Badge variant="outline" className="text-xs">GenAI</Badge>
+                    <Badge variant="outline" className="text-xs">RAG</Badge>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="text-lg font-bold text-foreground">ByteFest 2K25 Website</h3>
+                  <p className="text-muted-foreground">Official web platform for college tech fest with event listings, user registration, and real-time updates.</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <Badge variant="outline" className="text-xs">HTML</Badge>
+                    <Badge variant="outline" className="text-xs">CSS</Badge>
+                    <Badge variant="outline" className="text-xs">JavaScript</Badge>
+                  </div>
+                        </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Education */}
-              <Card className="animate-fade-in-right" style={{ animationDelay: '0.1s' }}>
-                <CardHeader>
-                  <CardTitle>Education</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6">
-                    {education.map((edu, index) => (
-                      <div key={index} className="flex gap-4">
-                        <div className="flex flex-col items-center">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-sm text-primary font-semibold">{edu.year}</div>
-                          <div className="font-semibold text-lg">{edu.degree}</div>
-                          <div className="text-muted-foreground font-medium">{edu.institution}</div>
-                          <p className="text-sm text-muted-foreground mt-2">{edu.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+          {/* Certifications */}
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-6">Certifications</h2>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Problem Solving Certificate - HackerRank (Mar 2025)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Software Engineer Intern - HackerRank Campus Club, AUFS (Mar 2025)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Certificate of Appreciation – ByteFest 2K25 - M.B.E. Society's College of Engineering (Jun 2025)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Jr. Web Developer - CuroSoft (May 2025)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <span>CET Cell Internship - Server Manager - EduSpark International Pvt. Ltd. (Mar 2025)</span>
+                </li>
+              </ul>
                 </CardContent>
               </Card>
-
-              {/* Languages */}
-              <Card className="animate-fade-in-right" style={{ animationDelay: '0.2s' }}>
-                <CardHeader>
-                  <CardTitle>Languages</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-4">
-                    {['English', 'Hindi', 'Marathi', 'German'].map((language) => (
-                      <div key={language} className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="font-medium">{language}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
         </div>
       </main>
     </div>
