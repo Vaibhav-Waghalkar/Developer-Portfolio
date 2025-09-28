@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Award, Calendar, Building } from 'lucide-react';
@@ -68,7 +69,13 @@ const Certifications = () => {
   };
 
   return (
-    <section className="py-16 bg-muted/30">
+    <motion.section 
+      className="py-16 bg-muted/30"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-developer to-ai bg-clip-text text-transparent">
@@ -81,7 +88,7 @@ const Certifications = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0">
@@ -141,7 +148,7 @@ const Certifications = () => {
           </Card>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Navigation } from '@/components/Navigation';
 import { ScrollIndicator } from '@/components/ScrollIndicator';
 import { CodeWindow } from '@/components/CodeWindow';
@@ -9,6 +10,7 @@ import Skills from '@/components/Skills';
 import { EducationTimeline } from '@/components/EducationTimeline';
 import Certifications from '@/components/Certifications';
 import profileMiddle from '@/assets/Profile 5.png';
+import FadeIn from '@/components/FadeIn';
 
 const Index = () => {
   // Smooth scroll to #about when user scrolls down from the very top
@@ -60,19 +62,40 @@ const Index = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen gap-4 md:gap-8 lg:gap-12 px-4 pt-24 relative z-10">
           
           {/* Left Column - Full Stack Developer */}
-          <div className="flex flex-col items-start w-full lg:w-1/3 max-w-lg gap-4 md:gap-6 animate-fade-in-left">
+          <motion.div 
+            className="flex flex-col items-start w-full lg:w-1/3 max-w-lg gap-4 md:gap-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-cyan-400 tracking-tight leading-tight">
+              <motion.h1 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-cyan-400 tracking-tight leading-tight"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              >
                 <span className="block">Full-Stack Web</span>
                 <span className="block">Developer</span>
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-lg">
+              </motion.h1>
+              <motion.p 
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              >
                 Building scalable web applications with React, FastAPI, and modern technologies.
-              </p>
+              </motion.p>
             </div>
             
             {/* Floating Code Window */}
-            <div className="relative animate-float w-full">
+            <motion.div 
+              className="relative w-full"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              whileHover={{ y: -5 }}
+            >
               <CodeWindow 
                 title="index.html" 
                 className="w-full max-w-md shadow-developer border-developer/20"
@@ -86,36 +109,69 @@ const Index = () => {
                   <div className="text-gray-500">&lt;/html&gt;</div>
                 </div>
               </CodeWindow>
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-developer rounded-full animate-glow-pulse"></div>
-            </div>
-          </div>
+              <motion.div 
+                className="absolute -top-2 -right-2 w-4 h-4 bg-developer rounded-full"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </motion.div>
+          </motion.div>
 
           {/* Center Image */}
-          <div className="flex-shrink-0 relative group">
+          <motion.div 
+            className="flex-shrink-0 relative group"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
+          >
             <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full overflow-hidden border-4 border-background shadow-elegant">
-              <img 
+              <motion.img 
                 src={profileMiddle} 
                 alt="Profile photo"
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 cursor-zoom-in pointer-events-auto"
+                className="w-full h-full object-cover object-center cursor-zoom-in pointer-events-auto"
                 onClick={() => setIsLightboxOpen(true)}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column - AI Developer */}
-          <div className="flex flex-col items-start w-full lg:w-1/3 max-w-lg gap-4 md:gap-6 animate-fade-in-right">
+          <motion.div 
+            className="flex flex-col items-start w-full lg:w-1/3 max-w-lg gap-4 md:gap-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
             <div className="space-y-4 text-left lg:text-right">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-purple-400 tracking-tight">
+              <motion.h1 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-purple-400 tracking-tight"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              >
                 <span className="block">AI</span>
                 <span className="block">Developer</span>
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-lg lg:ml-auto">
+              </motion.h1>
+              <motion.p 
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-lg lg:ml-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+              >
                 Creating intelligent systems with neural networks, LLMs, and advanced automation.
-              </p>
+              </motion.p>
             </div>
             
             {/* Floating Code Window */}
-            <div className="relative animate-float w-full lg:ml-auto" style={{ animationDelay: '1s' }}>
+            <motion.div 
+              className="relative w-full lg:ml-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+              whileHover={{ y: -5 }}
+            >
               <CodeWindow 
                 title="ai_model.py" 
                 className="w-full max-w-md shadow-ai border-ai/20"
@@ -126,9 +182,13 @@ const Index = () => {
                   <div><span className="text-yellow-400">print</span>(<span className="text-white">model</span>(<span className="text-green-400">"Mission: Engineer intelligent solutions for a smarter future."</span>))</div>
                 </div>
               </CodeWindow>
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-ai rounded-full animate-glow-pulse"></div>
-            </div>
-          </div>
+              <motion.div 
+                className="absolute -top-2 -right-2 w-4 h-4 bg-ai rounded-full"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              />
+            </motion.div>
+          </motion.div>
         </div>
 
         <ScrollIndicator />

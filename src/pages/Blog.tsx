@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Navigation } from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import FadeIn from '@/components/FadeIn';
 
 const Blog = () => {
   const [filter, setFilter] = useState('All');
@@ -84,87 +86,135 @@ const Blog = () => {
       <main className="container mx-auto px-4 pt-24 pb-12">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-developer to-ai bg-clip-text text-transparent">
-              Blog
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Insights on AI development, full-stack engineering, and the latest in tech innovation
-            </p>
+          <div className="text-center mb-12">
+            <FadeIn>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-developer to-ai bg-clip-text text-transparent">
+                Blog
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Insights on AI development, full-stack engineering, and the latest in tech innovation
+              </p>
+            </FadeIn>
           </div>
 
           {/* Filter Bar */}
-          <div className="flex flex-wrap gap-3 justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={filter === category ? "default" : "outline"}
-                onClick={() => setFilter(category)}
-                className="px-6 py-2"
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
+          <FadeIn delay={0.4}>
+            <div className="flex flex-wrap gap-3 justify-center mb-12">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={filter === category ? "default" : "outline"}
+                  onClick={() => setFilter(category)}
+                  className="px-6 py-2"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
+          </FadeIn>
 
           {/* Blog Posts Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {filteredPosts.map((post, index) => (
-              <Card 
-                key={post.id} 
-                className="hover:shadow-elegant transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${0.1 * index}s` }}
+              <motion.div
+                key={post.id}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
               >
-                <CardHeader>
-                  <div className="flex justify-between items-start gap-4 mb-2">
-                    <Badge variant="secondary" className="shrink-0">
-                      {post.category}
-                    </Badge>
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <Calendar className="h-3 w-3" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric',
-                        year: 'numeric'
-                      })}
-                    </div>
-                  </div>
-                  <CardTitle className="text-lg leading-tight">{post.title}</CardTitle>
-                  <CardDescription className="text-sm">{post.description}</CardDescription>
-                </CardHeader>
-                
-                <CardContent>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
-                    <Clock className="h-3 w-3" />
-                    {post.readTime}
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    {post.tags.slice(0, 3).map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
-                        {tag}
+                <Card className="hover:shadow-elegant transition-all duration-300 hover:scale-105">
+                  <CardHeader>
+                    <div className="flex justify-between items-start gap-4 mb-2">
+                      <Badge variant="secondary" className="shrink-0">
+                        {post.category}
                       </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                
-                <CardFooter>
-                  <Button variant="outline" size="sm" className="w-full group">
-                    Read More
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </CardFooter>
-              </Card>
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Calendar className="h-3 w-3" />
+                        {new Date(post.date).toLocaleDateString('en-US', { 
+                          month: 'short', 
+                          day: 'numeric',
+                          year: 'numeric'
+                        })}
+                      </div>
+                    </div>
+                    <CardTitle className="text-lg leading-tight">{post.title}</CardTitle>
+                    <CardDescription className="text-sm">{post.description}</CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
+                      <Clock className="h-3 w-3" />
+                      {post.readTime}
+                    </div>
+                    <motion.div 
+                      className="flex flex-wrap gap-1"
+                      variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                          opacity: 1,
+                          transition: {
+                            staggerChildren: 0.05,
+                          },
+                        },
+                      }}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                    >
+                      {post.tags.slice(0, 3).map((tag) => (
+                        <motion.div
+                          key={tag}
+                          variants={{
+                            hidden: { opacity: 0, scale: 0.8 },
+                            visible: { opacity: 1, scale: 1 },
+                          }}
+                        >
+                          <Badge variant="outline" className="text-xs">
+                            {tag}
+                          </Badge>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  </CardContent>
+                  
+                  <CardFooter>
+                    <Button variant="outline" size="sm" className="w-full group">
+                      Read More
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Coming Soon Section */}
-          <div className="text-center mt-16 p-8 border border-dashed border-border rounded-lg">
-            <h3 className="text-2xl font-bold mb-4">More Posts Coming Soon!</h3>
-            <p className="text-muted-foreground">
-              I'm constantly working on new projects and learning new technologies. 
-              Stay tuned for more insights on AI development, full-stack engineering, and tech innovations.
-            </p>
-          </div>
+          <FadeIn delay={0.6}>
+            <div className="text-center mt-16 p-8 border border-dashed border-border rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">More Posts Coming Soon!</h3>
+              <p className="text-muted-foreground">
+                I'm constantly working on new projects and learning new technologies. 
+                Stay tuned for more insights on AI development, full-stack engineering, and tech innovations.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </main>
     </div>
