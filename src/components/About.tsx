@@ -43,7 +43,7 @@ const About = () => {
             
             {/* Motto */}
             <FadeIn delay={0.6}>
-              <Card className="max-w-2xl mx-auto bg-gradient-to-r from-developer/5 to-ai/5 border-developer/20">
+              <Card className="max-w-2xl mx-auto bg-gradient-to-r from-developer/5 to-ai/5 border-developer/20 my-8">
                 <CardContent className="p-6">
                   <blockquote className="text-lg font-medium text-foreground italic text-center">
                     "Code with purpose. Learn with passion. Deliver with pride."
