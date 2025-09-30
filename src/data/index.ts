@@ -1,5 +1,5 @@
 export const aboutMe = {
-  description: "I'm Vaibhav, a Computer Science student on a mission to build software that thinks. My passion lies at the intersection of full-stack development and artificial intelligence—where robust backend logic meets intelligent, data-driven features. I thrive on architecting end-to-end solutions, from designing a responsive React frontend to deploying a complex FastAPI backend. My goal is to not just write code, but to create meaningful and innovative applications that solve real-world problems."
+  description: "I'm Vaibhav, a Computer Science student on a mission to build software that thinks. My passion lies at the intersection of full-stack development and artificial intelligence—where robust backend logic meets intelligent, data-driven features. I thrive on architecting end-to-end solutions, from designing a responsive React frontend to deploying a complex FastAPI backend. My goal is to not just write code, but to create meaningful and innovative applications that solve real-world problems, from developing computer vision models with PyTorch to deploying scalable APIs with FastAPI."
 };
 
 export const educationData = [

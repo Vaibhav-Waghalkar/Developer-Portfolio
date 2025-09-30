@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -7,21 +8,25 @@ import { ExternalLink, Github } from 'lucide-react';
 import FadeIn from './FadeIn';
 
 const Projects = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
   const projects = [
     {
       title: "ARIS (Advanced Responsive Intelligent System)",
-      description: "Engineered ARIS, an intelligent assistant designed to streamline daily productivity. Leveraging LLMs, this application provides a seamless voice and text interface for automating tasks like email drafting, executing system commands, and real-time information retrieval. The backend is powered by Python and FastAPI with WebSockets for instant, two-way communication with the React frontend.",
+      summary: "Intelligent assistant blending Siri-like system control with ChatGPT-style conversation.",
+      description: "Engineered ARIS, an intelligent assistant designed to streamline daily productivity. Leveraging LLMs, this application provides a seamless voice and text interface for automating tasks like email drafting, executing system commands, and real-time information retrieval. The backend is powered by Python and FastAPI with WebSockets for instant, two-way communication with the React frontend. This project combines the capabilities of a system controller like Siri with a conversational AI like ChatGPT, allowing you to both command your operating system and chat with an intelligent assistant.",
       tags: ["Python", "FastAPI", "Ollama", "JavaScript", "AI/ML"],
       repoLink: "https://github.com/Vaibhav-Waghalkar/ARIS-AI_Assistant"
     },
     {
       title: "AI Creation Platform (Hackathon)",
+      summary: "Multi-bot AI platform with RAG, rapid prototyping for hackathon delivery.",
       description: "Developed a versatile, multi-bot AI platform as a key contributor during the Google Gen AI International Hackathon. This project utilizes Retrieval-Augmented Generation (RAG) to allow users to build and deploy multiple, personality-aware AI bots with custom knowledge bases. The platform, built with FastAPI and AI/ML libraries, showcases my ability to rapidly prototype and deliver complex AI-driven solutions under pressure.",
       tags: ["Python", "GenAI", "RAG"],
       repoLink: "https://github.com/manavgt54/CHATBOT-CREATOR-AND-PRODUCTIVITY-VIBE-WORKSPACE"
     },
     {
       title: "ByteFest 2K25 Website",
+      summary: "Official tech fest website with listings, registrations, and real-time updates.",
       description: "The official web platform for a college tech fest, featuring event listings, user registration, and real-time result updates.",
       tags: ["HTML", "CSS", "JavaScript"],
       repoLink: "https://github.com/Vaibhav-Waghalkar/ByteFest2K25",
@@ -29,12 +34,14 @@ const Projects = () => {
     },
     {
       title: "Developer Portfolio",
+      summary: "Personal portfolio showcasing projects and skills with modern UI.",
       description: "My personal portfolio website built with Next.js and Tailwind CSS to showcase my skills and projects.",
       tags: ["Next.js", "React", "TailwindCSS"],
       repoLink: "https://github.com/Vaibhav-Waghalkar/Developer-Portfolio"
     },
     {
       title: "House Price Prediction ML",
+      summary: "Regression-based price predictor trained on Kaggle housing dataset.",
       description: "A predictive machine learning model using regression techniques on a Kaggle dataset to estimate house prices.",
       tags: ["Python", "Machine Learning", "Regression"],
       repoLink: "https://github.com/Vaibhav-Waghalkar/House-Price-Prediction-ML"
@@ -43,7 +50,8 @@ const Projects = () => {
 
   return (
     <motion.section 
-      className="py-16 bg-muted/30"
+      className={`py-16 bg-muted/30 ${inView ? 'reveal-active' : 'reveal-init'}`}
+      ref={ref}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -86,15 +94,15 @@ const Projects = () => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Card className="group project-card uniform-project-card cursor-pointer">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {project.description}
+                <CardContent className="space-y-4 flex-1 flex flex-col justify-between">
+                  <p className="text-muted-foreground text-sm leading-relaxed project-summary">
+                    {project.summary}
                   </p>
                   
                   <motion.div 

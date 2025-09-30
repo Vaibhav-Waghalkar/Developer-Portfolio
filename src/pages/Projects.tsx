@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import ProjectModal from '@/components/ProjectModal';
 import { Navigation } from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -7,11 +9,15 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const handleCardClick = (project: any) => { setSelectedProject(project); };
 
   const projects = [
     {
       id: 1,
       title: 'ARIS – Advanced Responsive Intelligent System',
+      summary: 'AI assistant with voice/text automation and OS control',
       description: 'AI-powered assistant with ChatGPT-style interface and voice automation',
       fullDescription: 'An AI-powered assistant with a ChatGPT-style interface, voice/text input, system automation (open apps/files, run commands), email drafting, and support for multiple LLMs.',
       stack: ['Python', 'FastAPI', 'React', 'WebSockets', 'LLMs'],
@@ -23,6 +29,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'AI Creation Platform',
+      summary: 'Multi-bot platform with RAG and personality-aware agents',
       description: 'Multi-bot AI platform built for Google Gen AI Hackathon',
       fullDescription: 'A multi-bot AI platform with RAG, augmentation, and personality-aware bots, built for the Google Gen AI International Hackathon.',
       stack: ['Python', 'AI/ML', 'RAG', 'FastAPI'],
@@ -34,6 +41,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'ByteFest2K25',
+      summary: 'Tech fest site with listings, auth, and live results',
       description: 'Full-stack web platform for college tech fest',
       fullDescription: 'A full-stack web platform for a college tech fest, featuring event listings, user registration, and real-time result updates.',
       stack: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
@@ -45,6 +53,7 @@ const Projects = () => {
     {
       id: 4,
       title: 'Student Evaluation Tool',
+      summary: 'Admin scoring portal with dashboards and analytics',
       description: 'Admin portal for scoring events with interactive dashboards',
       fullDescription: 'An admin portal designed for scoring events and visualizing performance through interactive dashboards.',
       stack: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
@@ -56,6 +65,7 @@ const Projects = () => {
     {
       id: 5,
       title: 'House Price Prediction ML',
+      summary: 'Regression model to estimate house prices from key features',
       description: 'Predictive machine learning model using regression techniques',
       fullDescription: 'A predictive machine learning model using regression techniques on a Kaggle dataset to estimate house prices.',
       stack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
@@ -67,6 +77,7 @@ const Projects = () => {
     {
       id: 6,
       title: 'DSA Practice Repository',
+      summary: 'Curated DSA practice in C/C++/JS with patterns and solutions',
       description: 'Solutions and practice problems for Data Structures and Algorithms',
       fullDescription: 'A personal repository containing solutions and practice problems for Data Structures and Algorithms in C, C++, and JavaScript.',
       stack: ['C', 'C++', 'JavaScript', 'Algorithms'],
@@ -84,7 +95,7 @@ const Projects = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <div className="min-h-screen bg-background font-plus-jakarta">
+    <div className={`min-h-screen bg-background font-plus-jakarta ${inView ? 'reveal-active' : 'reveal-init'}`} ref={ref}>
       <Navigation />
       
       <main className="container mx-auto px-4 pt-24 pb-12">
@@ -118,8 +129,9 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={project.id} 
-                className="hover:shadow-elegant transition-all duration-300 animate-fade-in-up"
+                className="project-card animate-fade-in-up cursor-pointer"
                 style={{ animationDelay: `${0.1 * index}s` }}
+                onClick={() => handleCardClick(project)}
               >
                 <CardHeader>
                   <div className="flex justify-between items-start gap-4">
@@ -163,6 +175,9 @@ const Projects = () => {
               </Card>
             ))}
           </div>
+          {selectedProject && (
+            <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+          )}
         </div>
       </main>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,10 +7,12 @@ import { aboutMe } from '@/data';
 import FadeIn from './FadeIn';
 
 const About = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
   return (
     <motion.section 
       id="about" 
-      className="py-16 bg-muted/30"
+      className={`py-16 bg-muted/30 ${inView ? 'reveal-active' : 'reveal-init'}`}
+      ref={ref}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -29,21 +32,21 @@ const About = () => {
             <FadeIn delay={0.2}>
               <div className="mb-6">
                 <Badge variant="outline" className="text-lg px-6 py-2 border-primary/30 text-primary">
-                  CSE Student | AI Developer | Full-Stack Web Developer | Builder of Ideas & Innovations
+                  CSE Student | AI Developer | Full-Stack Web Developer | AI-Powered Web Applications
                 </Badge>
               </div>
             </FadeIn>
             
             {/* Summary */}
             <FadeIn delay={0.4}>
-              <p className="text-lg text-gray-300 max-w-4xl text-center">
+              <p className="text-lg text-gray-300 max-w-4xl text-center whoami-paragraph">
                 {aboutMe.description}
               </p>
             </FadeIn>
             
             {/* Motto */}
             <FadeIn delay={0.6}>
-              <Card className="max-w-2xl mx-auto bg-gradient-to-r from-developer/5 to-ai/5 border-developer/20 my-8">
+              <Card className="max-w-2xl mx-auto bg-gradient-to-r from-developer/5 to-ai/5 border-developer/20 my-8 quote-card">
                 <CardContent className="p-6">
                   <blockquote className="text-lg font-medium text-foreground italic text-center">
                     "Code with purpose. Learn with passion. Deliver with pride."
