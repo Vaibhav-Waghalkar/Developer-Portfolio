@@ -61,215 +61,163 @@ const Resume = () => {
   return (
     <div className="min-h-screen bg-background font-plus-jakarta">
       <Navigation />
-      
       <main className="container mx-auto px-4 pt-24 pb-12">
-        <div className="max-w-4xl mx-auto">
-          {/* Header with Download Button */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-developer to-ai bg-clip-text text-transparent">
-              Vaibhav Waghalkar
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              CSE Student | AI Developer | Full-Stack Web Developer | Builder of Ideas & Innovations
-            </p>
-            <Button size="lg" className="mb-8">
-              <Download className="h-5 w-5 mr-2" />
-              <a href="/VaibhavWaghalkar_InternshalaResume.pdf" download>
-                Download Resume PDF
-              </a>
-            </Button>
-          </div>
+        <div className="max-w-4xl mx-auto bg-white p-8 sm:p-12 shadow-lg">
+          <header className="text-center mb-10">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800">Vaibhav Waghalkar</h1>
+            <div className="mt-4 flex justify-center items-center flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+              <span className="flex items-center gap-2"><MapPin className="h-4 w-4" />Maharashtra, India</span>
+              <span className="flex items-center gap-2"><Phone className="h-4 w-4" />+91 9356630640</span>
+              <span className="flex items-center gap-2"><Mail className="h-4 w-4" /><a href="mailto:vaibhavwaghalkar2@gmail.com" className="text-blue-600 hover:underline">vaibhavwaghalkar2@gmail.com</a></span>
+              <span className="flex items-center gap-2"><Linkedin className="h-4 w-4" /><a href="https://linkedin.com/in/vaibhav-waghalkar" target="_blank" className="text-blue-600 hover:underline">linkedin.com/in/vaibhav-waghalkar</a></span>
+              <span className="flex items-center gap-2"><Github className="h-4 w-4" /><a href="https://github.com/Vaibhav-Waghalkar" target="_blank" className="text-blue-600 hover:underline">github.com/Vaibhav-Waghalkar</a></span>
+            </div>
+          </header>
 
-          {/* Contact Information */}
-          <Card className="mb-8">
-            <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex items-center gap-3">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
-                  <a href="mailto:vaibhavwaghalkar2@gmail.com" className="hover:text-primary transition-colors">
-                      vaibhavwaghalkar2@gmail.com
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <MapPin className="h-4 w-4 text-muted-foreground" />
-                  <span>Ambajogai, Maharashtra, India</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Github className="h-4 w-4 text-muted-foreground" />
-                  <a href="https://github.com/Vaibhav-Waghalkar" className="hover:text-primary transition-colors">
-                    github.com/Vaibhav-Waghalkar
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Linkedin className="h-4 w-4 text-muted-foreground" />
-                  <a href="https://www.linkedin.com/in/vaibhav-waghalkar-848885343" className="hover:text-primary transition-colors">
-                      LinkedIn Profile
-                    </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Instagram className="h-4 w-4 text-muted-foreground" />
-                  <a href="https://www.instagram.com/waghalkar.vaibhav/" className="hover:text-primary transition-colors">
-                    @waghalkar.vaibhav
-                  </a>
-                </div>
+          <section>
+            <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Professional Summary</h2>
+            <p className="text-gray-700">A results-driven Full Stack & AI Developer with proven experience building end-to-end digital solutions. Skilled in creating dynamic web applications with React and Python/FastAPI, and integrating Machine Learning models and LLMs to produce intelligent, user-centric products. Eager to apply technical expertise and leadership skills to deliver innovative and impactful software.</p>
+          </section>
+
+          <hr className="my-6" />
+
+          <section>
+            <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Highlights & Achievements</h2>
+            <ul className="list-disc text-gray-700 pl-5 space-y-2">
+              <li><span className="font-semibold">Technical & Management Lead (ByteFest 2K25):</span> Spearheaded website development, data management for 15+ events, and coordination for the festival's flagship Hackathon.</li>
+              <li><span className="font-semibold">AI Platform Development:</span> Architected and constructed multiple full-stack AI applications, including an intelligent IDE and a dynamic website builder, from concept to deployment.</li>
+              <li><span className="font-semibold">High-Availability System Management:</span> Maintained 99.9% server uptime for 500+ concurrent users during high-stakes live examination sessions.</li>
+            </ul>
+          </section>
+
+          <hr className="my-6" />
+
+          <section>
+            <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Experience</h2>
+            <div className="space-y-6">
+              <div>
+                <p className="text-gray-900 font-semibold">AI Full-stack Developer (Intern)</p>
+                <p className="italic text-gray-600">Real IT Solutions, Pune | Aug 2025 – Present (Virtual)</p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Constructed two AI-powered full-stack applications, building <span className="font-semibold">55+ </span>API endpoints with Python and FastAPI.</li>
+                  <li>Key projects included an intelligent IDE with smart-assistance features and a dynamic Website Builder with 10+ templates.</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> Python, FastAPI, React, Next.js, Machine Learning, NLP, PostgreSQL, Redis</p>
               </div>
-            </CardContent>
-          </Card>
-
-          {/* Professional Summary */}
-          <Card className="mb-8">
-            <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-4">Professional Summary</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                A Computer Science Engineering student passionate about AI, ML, and scalable web systems. 
-                Currently building ARIS, an advanced AI-powered assistant with chat, voice, and automation capabilities. 
-                I love solving problems, building products, and optimizing systems with a dream to shape the future 
-                through AI-powered and full-stack innovations.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mt-4 italic">
-                "Code with purpose. Learn with passion. Deliver with pride."
-              </p>
-            </CardContent>
-          </Card>
-
-          {/* Work Experience */}
-          <Card className="mb-8">
-            <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6">Work Experience</h2>
-              <div className="space-y-6">
-                {experiences.map((exp, index) => (
-                  <div key={index} className="border-l-4 border-primary pl-6">
-                    <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
-                    <p className="text-lg text-primary font-semibold">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground mb-3">{exp.duration}</p>
-                    <ul className="space-y-2">
-                      {exp.description.map((desc, descIndex) => (
-                        <li key={descIndex} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-muted-foreground">{desc}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+              <div>
+                <p className="text-gray-900 font-semibold">Jr. Web Developer (Intern)</p>
+                <p className="italic text-gray-600">Curosoft, Sambhajinagar | May 2025 – Jun 2025</p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Launched <span className="font-semibold">3</span> responsive client websites, improving average page load speed by <span className="font-semibold">30%</span> through code optimization.</li>
+                  <li>Contributed to the full project lifecycle for <span className="font-semibold">2</span> live projects, from requirements analysis to creating <span className="font-semibold">5+</span> technical documents (SRS).</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Git</p>
               </div>
-            </CardContent>
-          </Card>
+              <div>
+                <p className="text-gray-900 font-semibold">Server Manager</p>
+                <p className="italic text-gray-600">Eduspark International Pvt. Ltd., Parbhani | Mar 2025 – May 2025</p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Oversaw live CET exam servers for <span className="font-semibold">500+</span> concurrent users, maintaining <span className="font-semibold">99.9%</span> uptime across <span className="font-semibold">35+</span> exam sessions.</li>
+                  <li>Resolved all real-time technical and network issues, ensuring <span className="font-semibold">100%</span> data integrity and zero disruptions for candidates.</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> Network Monitoring Tools, Backup & Recovery Systems, Windows Server</p>
+              </div>
+            </div>
+          </section>
 
-          {/* Education Section */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-cyan-400 border-b-2 border-gray-700 pb-2 mb-4">
-              Education
-            </h2>
-            <div className="mb-4">
-              <h3 className="text-xl font-semibold text-white">
-                B.Tech, Computer Science & Engineering
-              </h3>
-              <p className="text-gray-400">
-                M.B.E. Society's College of Engineering, Ambajogai
-              </p>
-              <p className="text-gray-500 italic">2022 - 2026</p>
+          <hr className="my-6" />
+
+          <section>
+            <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Skills</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+              <div><span className="font-semibold">Programming Languages:</span> Python, JavaScript, C++, C</div>
+              <div><span className="font-semibold">Web Development:</span> React, Next.js, FastAPI, Flask, HTML, CSS</div>
+              <div><span className="font-semibold">AI / Machine Learning:</span> LLMs (Ollama), NLP, Machine Learning, Prompt Engineering, RAG</div>
+              <div><span className="font-semibold">Tools & Technologies:</span> Git, GitHub, Redis, PostgreSQL, Docker, VS Code, Postman</div>
+              <div><span className="font-semibold">Core Concepts:</span> Data Structures & Algorithms, Object-Oriented Programming</div>
+            </div>
+          </section>
+
+          <hr className="my-6" />
+
+          <section>
+            <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Projects</h2>
+            <div className="space-y-6">
+              <div>
+                <p className="font-semibold">CodeCraft - AI Website Builder Platform <a href="https://github.com/Vaibhav-Waghalkar/CodeCraft" target="_blank" className="text-blue-600 hover:underline">GitHub Link</a></p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Architected a full-stack website builder with <span className="font-semibold">40+</span> RESTful API endpoints for AI content generation and user management.</li>
+                  <li>Created a responsive front-end with React and Next.js, featuring a library of <span className="font-semibold">30+</span> reusable components.</li>
+                  <li>Improved average API response time by <span className="font-semibold">40%</span> by implementing Redis caching for database queries.</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> React, Next.js, Python, FastAPI, PostgreSQL, Redis, JWT Authentication</p>
+              </div>
+              <div>
+                <p className="font-semibold">ARIS - Advanced Responsive Intelligent System <a href="https://github.com/Vaibhav-Waghalkar/ARIS-AI_Assistant" target="_blank" className="text-blue-600 hover:underline">GitHub Link</a></p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Built a Siri-like AI assistant with a web interface for real-time voice and text conversations.</li>
+                  <li>Integrated <span className="font-semibold">Ollama</span> to run a local LLM, enabling offline AI capabilities like content generation and system automation.</li>
+                  <li>Implemented hands-free wake-word activation for tasks like opening apps and exporting text to Word.</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> Python, FastAPI, JavaScript, HTML/CSS, Ollama, NLP</p>
+              </div>
+              <div>
+                <p className="font-semibold">AI-Powered IDE</p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Assembled a full-stack, intelligent IDE to enhance developer productivity by integrating AI-driven features.</li>
+                  <li>Constructed the backend using Python & FastAPI, creating scalable REST APIs for real-time code suggestions and error detection.</li>
+                  <li>Planned a modular architecture to support multiple programming languages and ensure high performance.</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> Python, FastAPI, React, JavaScript, HTML/CSS</p>
+              </div>
+              <div>
+                <p className="font-semibold">Vibe Workspace (Gen AI 2025 Hackathon) <a href="https://github.com/manavgt54/CHATBOT-CREATOR-AND-PRODUCTIVITY-VIBE-WORKSPACE" target="_blank" className="text-blue-600 hover:underline">GitHub Contribution</a></p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Contributed to a Gen AI hackathon project, implementing features for a multi-functional productivity workspace.</li>
+                  <li>Focused on the core logic for a dynamic, no-code chatbot creator within the platform.</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> React, Node.js, Express, MongoDB</p>
+              </div>
+              <div>
+                <p className="font-semibold">ByteFest 2K25 - Official Tech Fest Website <a href="https://bytefest2k25.netlify.app/" target="_blank" className="text-blue-600 hover:underline">Live Site</a></p>
+                <ul className="list-disc text-gray-700 pl-5 mt-2 space-y-1">
+                  <li>Produced the official website for the ByteFest 2K25 college tech fest.</li>
+                  <li>Fashioned a visually appealing and fully responsive UI using HTML, CSS, and JavaScript.</li>
+                  <li>Deployed and hosted the live website efficiently using GitHub Pages.</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-700"><span className="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, GitHub Pages</p>
+              </div>
+            </div>
+          </section>
+
+          <hr className="my-6" />
+
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Certifications</h2>
+              <ul className="text-gray-700 space-y-2">
+                <li>Problem Solving (Basic) - HackerRank</li>
+                <li>Software Engineer Intern - HackerRank</li>
+              </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-white">
-                Senior Secondary (XII), Science
-              </h3>
-              <p className="text-gray-400">
-                Yogeshwari Mahavidhyalay Ambajogai
-              </p>
-              <p className="font-semibold text-gray-300 mt-1">
-                MHT-CET Percentile: 87.40%
-              </p>
-            </div>
-          </div>
-
-              {/* Skills */}
-          <Card className="mb-8">
-            <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
-              <div className="space-y-6">
-                    {Object.entries(skills).map(([category, skillList]) => (
-                      <div key={category}>
-                    <h3 className="text-lg font-semibold mb-3 text-primary">{category}</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {skillList.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-sm">
-                              {skill}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-          {/* Key Projects */}
-          <Card className="mb-8">
-            <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6">Key Projects</h2>
-              <div className="space-y-4">
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-lg font-bold text-foreground">ARIS (Advanced Responsive Intelligent System)</h3>
-                  <p className="text-muted-foreground">AI-powered assistant with ChatGPT-style interface, voice/text input, system automation, and support for multiple LLMs.</p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <Badge variant="outline" className="text-xs">Python</Badge>
-                    <Badge variant="outline" className="text-xs">FastAPI</Badge>
-                    <Badge variant="outline" className="text-xs">Ollama</Badge>
-                    <Badge variant="outline" className="text-xs">AI/ML</Badge>
-                  </div>
-            </div>
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-lg font-bold text-foreground">AI Creation Platform (Hackathon)</h3>
-                  <p className="text-muted-foreground">Multi-bot AI platform with RAG and personality-aware bots, built for Google Gen AI Hackathon.</p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <Badge variant="outline" className="text-xs">Python</Badge>
-                    <Badge variant="outline" className="text-xs">GenAI</Badge>
-                    <Badge variant="outline" className="text-xs">RAG</Badge>
-                          </div>
-                        </div>
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-lg font-bold text-foreground">ByteFest 2K25 Website</h3>
-                  <p className="text-muted-foreground">Official web platform for college tech fest with event listings, user registration, and real-time updates.</p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <Badge variant="outline" className="text-xs">HTML</Badge>
-                    <Badge variant="outline" className="text-xs">CSS</Badge>
-                    <Badge variant="outline" className="text-xs">JavaScript</Badge>
-                  </div>
-                        </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-          {/* Certifications */}
-          <Card>
-            <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6">Certifications</h2>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Problem Solving Certificate - HackerRank (Mar 2025)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Software Engineer Intern - HackerRank Campus Club, AUFS (Mar 2025)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Certificate of Appreciation – ByteFest 2K25 - M.B.E. Society's College of Engineering (Jun 2025)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Jr. Web Developer - CuroSoft (May 2025)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span>CET Cell Internship - Server Manager - EduSpark International Pvt. Ltd. (Mar 2025)</span>
-                </li>
+              <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Languages</h2>
+              <ul className="text-gray-700 space-y-2">
+                <li><span className="font-semibold">English:</span> Professional Working Proficiency</li>
+                <li><span className="font-semibold">Hindi:</span> Native Proficiency</li>
+                <li><span className="font-semibold">Marathi:</span> Native Proficiency</li>
+                <li><span className="font-semibold">German:</span> Elementary Proficiency</li>
               </ul>
-                </CardContent>
-              </Card>
+            </div>
+            <div>
+              <h2 className="uppercase tracking-wider text-gray-900 font-semibold text-lg border-b border-gray-300 pb-2 mb-4">Education</h2>
+              <div className="text-gray-700">
+                <p className="font-semibold">B.Tech, Computer Science & Engineering</p>
+                <p>M.B.E. Society's College Of Engineering, Ambajogai</p>
+                <p className="text-sm">Expected 2026</p>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>

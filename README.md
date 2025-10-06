@@ -86,3 +86,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### 📜 License
 
 This project is distributed under the MIT License. See the `LICENSE` file for more information.
+
