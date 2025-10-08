@@ -34,8 +34,8 @@ Here is a gallery showcasing the website's design and features across different 
 
 -   **Frontend:** React, JavaScript, CSS3, HTML5
 -   **Backend:** FastAPI, Python
--   **Database/CMS:** [Mention the CMS you chose, e.g., Sanity.io]
--   **Deployment:** [Mention your hosting provider, e.g., Vercel, Netlify]
+-   **Database/CMS:** Yet to connect
+-   **Deployment:** yet to connect
 
 ---
 
