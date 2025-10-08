@@ -119,13 +119,13 @@ const Index = () => {
 
           {/* Center Image */}
           <motion.div 
-            className="flex-shrink-0 relative group"
+            className="flex-shrink-0 relative group flex flex-col items-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full overflow-hidden border-4 border-background shadow-elegant">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full overflow-hidden border-4 border-background shadow-elegant -mb-6 relative z-10">
               <motion.img 
                 src={profileMiddle} 
                 alt="Profile photo"
@@ -135,6 +135,16 @@ const Index = () => {
                 transition={{ duration: 0.3 }}
               />
             </div>
+            
+            {/* Name below profile photo */}
+            <motion.h2 
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-muted-foreground tracking-wide mt-8 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+            >
+              Vaibhav Waghalkar
+            </motion.h2>
           </motion.div>
 
           {/* Right Column - AI Developer */}

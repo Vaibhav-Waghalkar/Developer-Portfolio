@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import ProjectModal from '@/components/ProjectModal';
 import { Navigation } from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Eye } from 'lucide-react';
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
@@ -157,6 +158,12 @@ const Projects = () => {
                 </CardContent>
                 
                 <CardFooter className="flex gap-3">
+                  <Button variant="outline" size="sm" asChild>
+                    <Link to={`/project/${project.id}`}>
+                      <Eye className="h-4 w-4 mr-2" />
+                      View Details
+                    </Link>
+                  </Button>
                   <Button variant="outline" size="sm" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2" />

@@ -34,8 +34,26 @@ Here is a gallery showcasing the website's design and features across different 
 
 -   **Frontend:** React, JavaScript, CSS3, HTML5
 -   **Backend:** FastAPI, Python
--   **Database/CMS:** [Mention the CMS you chose, e.g., Sanity.io]
--   **Deployment:** [Mention your hosting provider, e.g., Vercel, Netlify]
+-   **Database/CMS:** Yet to connect
+-   **Deployment:** Yet to connect
+
+---
+
+### 🎯 Project Goals
+
+The primary goal of this project was to create a professional, fast, and visually appealing platform to showcase my skills and projects. Key objectives included:
+
+* **Mastering Modern Tools:** Gaining deeper experience with React for the frontend and FastAPI for a high-performance Python backend.
+* **Implementing a Headless CMS:** Building a flexible architecture that allows for easy content updates (projects, blog posts) without needing to redeploy the entire application.
+* **Focusing on UI/UX:** Designing a clean, intuitive, and fully responsive user interface that provides an excellent user experience on any device.
+
+### 🛤️ Learning Journey
+
+Building this portfolio was a significant learning experience. Some of the key challenges and takeaways include:
+
+* **State Management in React:** Explored different state management strategies to handle UI state and data fetching efficiently.
+* **API Integration:** Gained hands-on experience in designing and integrating a RESTful API with a React frontend, paying close attention to asynchronous operations and error handling.
+* **Deployment & DevOps:** Researched and planned the deployment process for a full-stack application, including setting up environment variables and preparing for a CI/CD pipeline.
 
 ---
 
@@ -86,4 +104,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### 📜 License
 
 This project is distributed under the MIT License. See the `LICENSE` file for more information.
-
