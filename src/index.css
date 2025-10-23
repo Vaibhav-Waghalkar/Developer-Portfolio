@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core background and text - Enhanced black theme (permanent dark) */
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
+
+    /* Developer side - Brighter neon cyan */
+    --developer-primary: 180 100% 80%;
+    --developer-primary-foreground: 0 0% 5%;
+    --developer-secondary: 180 30% 12%;
+    --developer-accent: 180 100% 70%;
+    --developer-glow: 180 100% 80%;
+
+    /* AI Engineer side - Brighter neon purple */
+    --ai-primary: 280 100% 80%;
+    --ai-primary-foreground: 0 0% 5%;
+    --ai-secondary: 280 30% 12%;
+    --ai-accent: 280 100% 70%;
+    --ai-glow: 280 100% 80%;
+
+    /* Enhanced black theme UI elements */
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 2%;
+
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 12%;
+    --input: 0 0% 8%;
+    --ring: 180 100% 80%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-developer: linear-gradient(135deg, hsl(var(--developer-primary)), hsl(var(--developer-accent)));
+    --gradient-ai: linear-gradient(135deg, hsl(var(--ai-primary)), hsl(var(--ai-accent)));
+    --gradient-split: linear-gradient(90deg, hsl(var(--developer-primary) / 0.1) 0%, hsl(var(--developer-primary) / 0.05) 25%, transparent 50%, hsl(var(--ai-primary) / 0.05) 75%, hsl(var(--ai-primary) / 0.1) 100%);
+
+    /* Enhanced dark mode shadows and effects */
+    --shadow-developer: 0 10px 40px hsl(var(--developer-primary) / 0.4);
+    --shadow-ai: 0 10px 40px hsl(var(--ai-primary) / 0.4);
+    --shadow-elegant: 0 4px 20px hsl(222.2 84% 4.9% / 0.1);
+    --glow-developer: 0 0 30px hsl(var(--developer-glow) / 0.6);
+    --glow-ai: 0 0 30px hsl(var(--ai-glow) / 0.6);
+
+    /* Enhanced terminal for black theme */
+    --terminal-bg: 0 0% 2%;
+    --terminal-text: 0 0% 98%;
+    --terminal-border: 0 0% 15%;
+
+    /* Sidebar dark mode */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Accent color for links and highlights */
+    --accent-color: #00BFFF;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-plus-jakarta;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Links use the accent color */
+  a {
+    color: var(--accent-color);
+  }
+}
+
+/* Featured quote card styles */
+.quote-card {
+  border: 1px solid var(--accent-color);
+  transition: all 0.25s ease;
+}
+.quote-card:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.15);
+}
+
+/* Project card hover effects */
+.project-card {
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 191, 255, 0.2);
+}
+
+/* Uniform card sizing and summary clamp for homepage */
+.uniform-project-card {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+p.project-summary {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Scroll reveal animation */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Who I Am paragraph weight */
+.whoami-paragraph {
+  font-weight: 400;
+}
