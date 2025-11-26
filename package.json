@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:github": "npm run build && node ./scripts/deploy-github-pages.cjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
